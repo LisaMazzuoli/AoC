@@ -47,9 +47,7 @@ def main():
         list1.append(line[len(line) // 2:])
 
     common_list = []  # lista degli elementi in comune senza ripetizioni
-    copylist = list.copy()
-    copylist1 = list1.copy()
-    common_list = intersection(copylist, copylist1)
+    common_list = intersection(list, list1)
 
     dict = {}
     dict = OrderedDict.fromkeys(string.ascii_lowercase, range(0))
