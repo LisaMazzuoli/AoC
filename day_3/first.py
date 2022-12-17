@@ -11,10 +11,9 @@ def copy(list):
 def intersection(list1, list2):
     newList = []
     count = 0
-    clist2 = list2.copy()
     for element in list1:
         copia = copy(element)
-        copia1 = copy(clist2[0])  # ho copiato la prima stringa
+        copia1 = copy(list2[0])  # ho copiato la prima stringa in lista
         copiares = []
         copia1res = []
         [copiares.append(x) for x in copia if x not in copiares]  # devo togliere le ripetizioni
@@ -23,7 +22,7 @@ def intersection(list1, list2):
             if el in copia1res:
                 newList.append(el)
                 count += 1
-        clist2.remove(clist2[0])
+        list2.remove(list2[0])
 
     return newList
 
