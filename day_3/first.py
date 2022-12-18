@@ -10,7 +10,6 @@ def copy(list):
 
 def intersection(list1, list2):
     newList = []
-    count = 0
     for element in list1:
         copia = copy(element)
         copia1 = copy(list2[0])  # ho copiato la prima stringa in lista
@@ -21,7 +20,6 @@ def intersection(list1, list2):
         for el in copiares:
             if el in copia1res:
                 newList.append(el)
-                count += 1
         list2.remove(list2[0])
 
     return newList
@@ -61,7 +59,8 @@ def main():
         j += 1
     mergeddict = {}
     mergeddict = merge(dict, dict2)  # dict con key=lettere e values=numeri
-
+    for keys in mergeddict: print(keys)
+    for el in common_list: print(el)
     sum = 0
 
     for elem in common_list: sum = sum + int(mergeddict[elem])  # cerco l'elemento della common list nelle keys
