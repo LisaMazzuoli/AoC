@@ -1,26 +1,26 @@
-def function(dict):
+def parse_elves_from_problem_file(elves_dict):
     k = 1
     count = 0
     with open("Elves&Calories", 'rt', encoding='utf-8') as f:
         for line in f:
             if count == 0:
-                dict['Elv' + str(k)] = 0
+                elves_dict['Elv' + str(k)] = 0
             if line.strip() != '':
-                dict['Elv' + str(k)] += int(line)
+                elves_dict['Elv' + str(k)] += int(line)
                 count = 1
 
             else:
                 k = k + 1
                 count = 0
-    return dict
+    return elves_dict
 
 
 def main():
-    d = {}
-    d = function(d)
+    elves_dict = {}
+    elves_dict = parse_elves_from_problem_file(elves_dict)
     # print(d.items())
-    print('Le calorie massime sono di ' + str(max(zip(d.values(), d.keys()))[1]) + ' pari a ' + str(
-        d[max(zip(d.values(), d.keys()))[1]]))
+    print('Le calorie massime sono di ' + str(max(zip(elves_dict.values(), elves_dict.keys()))[1]) + ' pari a ' + str(
+        elves_dict[max(zip(elves_dict.values(), elves_dict.keys()))[1]]))
 
 
 if __name__ == '__main__':
