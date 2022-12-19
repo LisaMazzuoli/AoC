@@ -18,7 +18,7 @@ def main():
     elves_dict = parse_elves_from_problem_file()
     # print(d.items())
 
-    elf_with_most_carbs = max(zip(elves_dict.values(), elves_dict.keys()))[1]
+    elf_with_most_carbs = max(elves_dict, key=elves_dict.get)
     print('Le calorie massime sono di ' + str(elf_with_most_carbs) + ' pari a ' + str(
         elves_dict[elf_with_most_carbs]))
 
