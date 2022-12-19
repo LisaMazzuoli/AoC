@@ -1,18 +1,16 @@
+from collections import defaultdict
+
+
 def parse_elves_from_problem_file():
-    elves_dict = dict()
+    elves_dict = defaultdict(int)
     k = 1
-    count = 0
     with open("Elves&Calories", 'rt', encoding='utf-8') as f:
         for line in f:
-            if count == 0:
-                elves_dict['Elv' + str(k)] = 0
             if line.strip() != '':
                 elves_dict['Elv' + str(k)] += int(line)
-                count = 1
 
             else:
                 k = k + 1
-                count = 0
     return elves_dict
 
 
