@@ -1,23 +1,8 @@
-def function(dict):
-    k = 1
-    count = 0
-    with open("Elves&Calories", 'rt', encoding='utf-8') as f:
-        for line in f:
-            if count == 0:
-                dict['Elv' + str(k)] = 0
-            if line.strip() != '':
-                dict['Elv' + str(k)] += int(line)
-                count = 1
-
-            else:
-                k = k + 1
-                count = 0
-    return dict
+from first import parse_elves_from_problem_file
 
 
 def main():
-    d = {}
-    d = function(d)
+    d = parse_elves_from_problem_file()
     sum = 0
     sum += d[max(zip(d.values(), d.keys()))[1]]
     d[max(zip(d.values(), d.keys()))[1]] = 0
