@@ -1,4 +1,5 @@
-def parse_elves_from_problem_file(elves_dict):
+def parse_elves_from_problem_file():
+    elves_dict = dict()
     k = 1
     count = 0
     with open("Elves&Calories", 'rt', encoding='utf-8') as f:
@@ -16,8 +17,7 @@ def parse_elves_from_problem_file(elves_dict):
 
 
 def main():
-    elves_dict = {}
-    elves_dict = parse_elves_from_problem_file(elves_dict)
+    elves_dict = parse_elves_from_problem_file()
     # print(d.items())
     print('Le calorie massime sono di ' + str(max(zip(elves_dict.values(), elves_dict.keys()))[1]) + ' pari a ' + str(
         elves_dict[max(zip(elves_dict.values(), elves_dict.keys()))[1]]))
