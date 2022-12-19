@@ -19,8 +19,8 @@ def main():
     # print(d.items())
 
     elf_with_most_carbs = max(elves_dict, key=elves_dict.get)
-    print('Le calorie massime sono di ' + str(elf_with_most_carbs) + ' pari a ' + str(
-        elves_dict[elf_with_most_carbs]))
+    print(f'Le calorie massime sono di {elf_with_most_carbs} '
+          f'pari a {elves_dict[elf_with_most_carbs]}')
 
 
 if __name__ == '__main__':
