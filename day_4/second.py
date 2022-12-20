@@ -3,7 +3,7 @@ from first_bis import read
 
 def intersection(first_list, second_list):
     aux_list = [value for value in first_list if value in second_list]
-    if len(aux_list) != 0:
+    if len(aux_list):
         return 1
     else:
         return 0
