@@ -2,7 +2,7 @@ from first import read
 
 
 def search(super_line, const):
-    result = 14  # almeno al quarto posto
+    result = 14  # almeno al quattordicesimo posto
     while len(super_line) > 13 and const == 0:
         newset = set(super_line[:14])
         if len(super_line[:14]) == len(newset):
@@ -10,7 +10,6 @@ def search(super_line, const):
         else:
             result += 1
         super_line.remove(super_line[0])
-        newset.clear()
 
     return result
 

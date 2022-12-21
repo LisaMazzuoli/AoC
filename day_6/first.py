@@ -1,7 +1,6 @@
 def read():
     with open("elv6", 'r', encoding='utf-8') as f:
         super_line = [el for line in f for el in line]
-    # print(super_line)
     return super_line
 
 
@@ -14,7 +13,6 @@ def search(super_line, const):
         else:
             result += 1
         super_line.remove(super_line[0])
-        newset.clear()
 
     return result
 
