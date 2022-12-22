@@ -7,15 +7,12 @@ def reordering(moves, final_dict):
         number_of_moves = skip[0]
         from_where = skip[1]
         to_where = skip[2]
-        #while number_of_moves > 0:
         crate_to_move = final_dict[from_where][-number_of_moves:]
         del final_dict[from_where][-number_of_moves:]
         if isinstance(final_dict[to_where], list):  # è di tipo lista
             final_dict[to_where].extend(crate_to_move)
-            #final_dict[to_where] + crate_to_move
-        else: # è una stringa
+        else:  # è una stringa
             final_dict[to_where] = list(final_dict[to_where]).extend(crate_to_move)
-        #    number_of_moves -= 1
         crate_to_move.clear()
     result = ''
     list_of_keys = [keys for keys in final_dict]
