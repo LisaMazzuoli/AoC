@@ -1,3 +1,5 @@
+#from ..day_1.first import function
+
 def change_list(lista):
     Newlista = []
     for l in lista:
@@ -40,9 +42,6 @@ def main():
     for l in list1I: copia.append(l)
     test = [1, 2, 3]  # lista test
     sum = 0
-    sum = 0
-    sum = 0
-    count = 0
     final_list = function(test, list1I, list1Y)
     # print(final_list)
     for elem in final_list:

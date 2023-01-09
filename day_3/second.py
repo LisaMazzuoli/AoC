@@ -30,9 +30,6 @@ def intersection(lista):
         [terza.append(x) for x in copia2 if x not in terza]
         newList.append(str(fun(terza, fun(prima, seconda))))
         del lista[0:3]
-        # lista.remove(lista[0])
-        # lista.remove(lista[1])
-        # lista.remove(lista[2])   #perché così mi da problemi?
 
     return newList
 
@@ -55,7 +52,7 @@ def main():
     common_list = []  # lista degli elementi in comune ogni tre righe senza ripetizioni
     common_list = intersection(third)
     common_list1 = []
-    for el in common_list: common_list1.append(el[2])    #come posso fare meglio?
+    for el in common_list: common_list1.append(el[2])  # come posso fare meglio?
     dict = {}
     dict = OrderedDict.fromkeys(string.ascii_lowercase, range(0))
     i = 1
